@@ -82,7 +82,7 @@ a {
 /*-------nainvisual--------*/
 #mainvisual {
     height: 600px;
-    background-image: url(mainvisual.jpg);
+    background-image: url(mainvisual.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
