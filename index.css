@@ -1,94 +1,425 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <title>Ryuji Nakamura</title>
-</head>
-<body>
-    <header id="header" class="wrapper">
-        <div class="nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
 
-    <div id="mainvisual">
-        <div class="mainvisual-content">
-            <h2 class="title">My Portfolio</h2>
-            <p>ポートフォリオをご覧いただきありがとうございます。</p>
-        </div>
-    </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <section id="about" class="wrapper">
-        <h1 class="section-title">About</h1>
-        <div class="about-container">
-             <div class="about-content">
-                <h2 class="about-title">私について</h2>
-                   <p>
-                        神奈川県出身。年齢25歳。<br>
-                        大学卒業後、未経験でIT業界に就職を致しました。<br>
-                        中々実務業務に就くことができず退職。<br>
-                        その後、現職に就職いたしました。<br>
-                        2022年の10月にweb制作の学習を開始。<br>
-                        達成感や自己成長につながることができるものづくりに憧れがあり、<br>
-                        web制作に興味を持ちました。<br>
-                        今後の目標として、日々学びと努力を怠らず、お客様から信頼されるような作品を届けたいです。<br>
-                        どうぞよろしくお願い致します。
-                    </p>
-            </div>
-            <div class="about-items">
-                    <h2 class="about-title">スキル</h2>
-                <div class="about-item">
-                    <h4>HTML・・・・・・・・・・★★★☆☆</h4>
-                    <h4>CSS・・・・・・・・・・・★★★☆☆</h4>
-                    <h4>JavaScript/Jquery・・・・★★☆☆☆</h4>
-                    <h4>GitHub・・・・・・・・・★★☆☆☆</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    background-color: black;
+    color: #fff;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    opacity: 0; /*bodyの中の要素を非表示にします*/ 
+    transition: opacity 4s ease; /*表示させるスピード*/
+}
 
-    <section id="work" class="wrapper">
-        <h1 class="section-title">Work</h1>
-        <div class="work-container">
-            <div class="work-content">
-                <a href="FC.DIORIA.html"><img src="FC.DIORIA.png" alt="ホームページ"></a>
-                <p>FC.DIORIA</p>
-            </div>
+body.active {
+    opacity: 1;
+}
 
-            <div class="work-content">
-                <a href="ATELIER.html"><img src="ATELIER.png" alt="ホームページ"></a>
-                <p>ATELIER</p>
-            </div>
-        </div>
-    </section>
 
-    <footer id="footer" class="wrapper">
-        <div class="nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.instagram.com/ryuji___n/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com/home?lang=ja"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Fwidget%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Fwidget%25252Fclose%26state%3D9fec98665820574ebc349f47d089a6%26client_id%3D1446101138&loginChannelId=1446101138#/"><i class="fa-brands fa-line"></i></a></li>
-                <li><a href="https://github.com/ryuji0909?tab=repositories"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
-        </div>
+img {
+    max-width: 100%;
+}
 
-        <div class="footer-footer">
-            <p>&copy;2023 Ryuji Nakamura </p>
-        </div> 
-    </footer>
+li {
+    list-style: none;
+}
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+a {
+    color: #fff;
+    text-decoration: none;
+}
+html{
+    /* フォントサイズの正確に */
+    -webkit-text-size-adjust: 100%;
+    /* 文字をシャープに */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* カーニングとリガチャ（合字）を調整 */
+    text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*-------header-------*/
+#header {
+    height: 100px;
+    padding: 40px;
+}
+
+#header .nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .nav ul li {
+    padding-left: 40px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+a {
+    position: relative;
+}
+
+#header a::after {
+    position: absolute;
+    left: 0;
+    bottom: 5; /*文字と線の距離*/
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px; /*線の太さ*/
+    background-color: #fff;
+    transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+#header a:hover::after {
+    width: 100%;
+}
+
+
+/*-------nainvisual--------*/
+#mainvisual {
+    height: 600px;
+    background-image: url(mainvisual.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#mainvisual .mainvisual-content {
+    position: absolute;
+    top: 55%;
+    right: 50%;
+}
+#mainvisual .title {
+    font-size: 60px;
+    font-family:-apple-system, "system-ui", "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Arial, Meiryo, sans-serif;
+    letter-spacing: 2px;
+}
+
+#mainvisual .mainvisual-content p {
+    font-size: 15px;
+}
+
+/*--------About-------*/
+#about {
+   margin-bottom: 150px;
+}
+
+#about .about-container {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    padding-left: 30px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+#about .about-content {
+    width: 50%;
+}
+
+#about .about-items {
+    margin-left: 60px;
+    width: 50%;
+}
+
+.about-content p {
+    font-family: 'La Belle Aurore', cursive;
+    font-family: 'Noto Serif JP', serif;
+}
+#about .about-title {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 25px;
+    padding: 3px;
+    border-left: 7px solid;
+    color: #fff;
+    font-weight: normal;
+}
+
+#about .about-item {
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 3;
+}
+.section-title {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 90px;
+    letter-spacing: 1px;
+}
+   
+.section-title:before {
+    position: absolute;
+    bottom: 1px; /*文字と線の間の幅*/
+    left: calc(50% - 40px); /*下線の場所*/
+    width: 80px; /*下線の長さ*/
+    height: 2px; /*下線の厚み、高さ*/
+    content: '';
+    border-radius: 3px;
+    background: #fff;
+}
+
+/*------work------*/
+#work {
+    margin-bottom: 150px;
+}
+
+.work-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+} 
+
+.work-container p {
+    padding-top: 10px;
+}
+
+.work-content img {
+    width: 500px;
+}
+
+/*ふわっと画像を表示させる*/
+.work-content {
+    opacity: 0;
+    transform: translateY(-50px); /*50px上からフェードインしてくる*/
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+  .work-content.fade-in-active {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+img{
+  transition: box-shadow .2s;
+}
+img:hover{
+  box-shadow: 0 0 50px white;
+}
+
+/*------footer-----*/
+#footer {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .nav ul {
+    display: flex;
+}
+
+#footer .nav ul li {
+    margin-left: 30px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+#footer .nav ul li a:hover {
+    opacity: 0.7;
+}
+
+#footer .footer-footer {
+    font-size: 10px;
+}
+
+/*画面遷移時にふわっと表示させる*/
+
+  
+
+
+@media screen and (max-width: 767px) {
+    #header {
+       text-align: center;
+    }
+
+   
+    #mainvisual .mainvisual-content {
+        top: 65%;
+        right: 30%;
+    }
+
+    #mainvisual .mainvisual-content .title {
+        font-size: 40px;
+    }
+
+    #about .about-container {
+        flex-direction: column;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    #about .about-content p {
+        font-size: 15px;
+    }
+
+    #about .about-items {
+        padding-left: -90px;
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    #about .about-item {
+        margin-left: 0;
+        font-size: 13px;
+        line-height: 4;
+    }
+
+    #work .work-container {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #work .work-content {
+        margin-bottom: 40px;
+    }
+
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #footer .footer-footer {
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+    #header .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual .mainvisual-content {
+        padding-left: 30px;
+    }
+
+    #mainvisual .mainvisual-content .title {
+        font-size: 30px;
+    }
+    #mainvisual .mainvisual-content p{
+        font-size: 10px;
+    }
+
+    #about .about-content {
+        margin-bottom: 80px;
+    }
+
+    #about .about-container .about-content p {
+        font-size: 15px;
+    } 
+
+    #about .about-items {
+        margin-bottom: -30px;
+    }
+
+    #about .about-items h4 {
+        font-size: 10px;
+    }
+    #work .work-container .work-content  {
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+        
+}
+
+
+@media screen and (max-width: 599px) {
+
+    #header .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual .mainvisual-content {
+        padding-left: 30px;
+    }
+
+    #mainvisual .mainvisual-content .title {
+        font-size: 30px;
+    }
+    #mainvisual .mainvisual-content p{
+        font-size: 10px;
+    }
+
+    #about .about-content {
+        margin-bottom: 80px;
+    }
+
+    #about .about-title {
+        margin-bottom: 50px;
+    }
+
+    #about .about-container .about-content p {
+        font-size: 15px;
+    } 
+    
+    #about .about-items {
+        margin-bottom: -30px;
+    }
+
+    #about .about-items h4 {
+        font-size: 10px;
+    }
+
+    #work .work-container .work-content  {
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+}
+
