@@ -275,7 +275,128 @@ img:hover{
     #footer .footer-footer {
         margin-top: 70px;
     }
+
+}
+
+@media screen and (max-width: 399px) {
+    #header .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual .mainvisual-content {
+        padding-left: 30px;
+    }
+
+    #mainvisual .mainvisual-content .title {
+        font-size: 30px;
+    }
+    #mainvisual .mainvisual-content p{
+        font-size: 10px;
+    }
+
+    #about .about-content {
+        margin-bottom: 80px;
+    }
+
+    #about .about-container .about-content p {
+        font-size: 15px;
+    } 
+
+    #about .about-items {
+        margin-bottom: -30px;
+    }
+
+    #about .about-items h4 {
+        font-size: 10px;
+    }
+    #work .work-container .work-content  {
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+        
 }
 
 
+@media screen and (max-width: 599px) {
+
+    #header .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual .mainvisual-content {
+        padding-left: 30px;
+    }
+
+    #mainvisual .mainvisual-content .title {
+        font-size: 30px;
+    }
+    #mainvisual .mainvisual-content p{
+        font-size: 10px;
+    }
+
+    #about .about-content {
+        margin-bottom: 80px;
+    }
+
+    #about .about-title {
+        margin-bottom: 50px;
+    }
+
+    #about .about-container .about-content p {
+        font-size: 15px;
+    } 
+    
+    #about .about-items {
+        margin-bottom: -30px;
+    }
+
+    #about .about-items h4 {
+        font-size: 10px;
+    }
+
+    #work .work-container .work-content  {
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+}
 
