@@ -10,7 +10,14 @@ body {
     background-color: black;
     color: #fff;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    opacity: 0; /*bodyの中の要素を非表示にします*/ 
+    transition: opacity 4s ease; /*表示させるスピード*/
 }
+
+body.active {
+    opacity: 1;
+}
+
 
 img {
     max-width: 100%;
@@ -189,6 +196,17 @@ a {
     width: 500px;
 }
 
+/*ふわっと画像を表示させる*/
+.work-content {
+    opacity: 0;
+    transform: translateY(-50px); /*50px上からフェードインしてくる*/
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+  .work-content.fade-in-active {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
 img{
   transition: box-shadow .2s;
 }
@@ -220,6 +238,11 @@ img:hover{
 #footer .footer-footer {
     font-size: 10px;
 }
+
+/*画面遷移時にふわっと表示させる*/
+
+  
+
 
 @media screen and (max-width: 767px) {
     #header {
