@@ -326,7 +326,9 @@ img:hover{
     }
 
     #mainvisual .mainvisual-content {
-        padding-left: 30px;
+        width: 100%;
+        top: 63%;
+        text-align: right;
     }
 
     #mainvisual .mainvisual-content .title {
@@ -400,14 +402,17 @@ img:hover{
 
     /*---mainvisual----*/
     #mainvisual .mainvisual-content {
-        padding-left: 30px;
+        width: 100%;
+        top: 63%;
+        text-align: right;
+    }
+
+    #mainvisual .title {
+        margin-right: 55px;
     }
 
     #mainvisual .mainvisual-content .title {
         font-size: 30px;
-    }
-    #mainvisual .mainvisual-content p{
-        font-size: 10px;
     }
 
     /*---about---*/
