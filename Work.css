@@ -132,15 +132,6 @@ a {
     font-weight: normal;
 }
 
-#mainvisual span {
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
-  
- #mainvisual span.fade {
-    opacity: 1;
-  }
-
 /*------work-----*/
 #work {
     margin: 0 auto 100px auto;
