@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function() { /*ページ読み込み
   });
 
 
+/*画面領域に入ってきたタイミングで要素をふわっと表示*/ 
 const fadeElems = document.querySelectorAll('.work-content'); 
 window.addEventListener('scroll', fadeIn);
 
@@ -22,3 +23,11 @@ function fadeIn() {
     }
   }
 }
+
+/*1文字ずつ文字を出現*/
+const spans = document.querySelectorAll('.mainvisual-content span');
+spans.forEach((span, index) => {
+  setTimeout(() => {
+    span.classList.add('fade');
+  }, 800 * index);
+});
