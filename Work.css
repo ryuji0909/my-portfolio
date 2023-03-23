@@ -120,8 +120,8 @@ a {
    top: 50%;
    left: 50%;
    transform: translate(-50%,-50%);
-
 }
+
 #mainvisual .title {
     font-size: 150px;
     display: flex;
@@ -334,6 +334,16 @@ a {
     #footer .nav ul {
         margin-right: 40px;
     }
+
+    #mainvisual {
+        position: relative;
+    }
+
+    #mainvisual .mainvisual-content {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+     }
 
     #mainvisual .title {
         font-size: 60px;
