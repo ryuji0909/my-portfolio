@@ -343,6 +343,8 @@ img:hover{
     #about .about-container {
         margin-bottom: -40px;
         padding: 0 6%;
+        margin-left: -50px;
+        text-align: left;
     }
 
     #about .about-content {
@@ -414,10 +416,12 @@ img:hover{
     }
 
    /*---about---*/
-    #about .about-container {
-        margin-bottom: -40px;
-        padding: 0 6%;
-    }
+   #about .about-container {
+    margin-bottom: -40px;
+    padding: 0 6%;
+    margin-left: -50px;
+    text-align: left;
+}
 
     #about .about-content {
         margin-bottom: 20px;
