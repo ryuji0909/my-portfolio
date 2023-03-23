@@ -244,7 +244,7 @@ a {
      #work .work-container {
         flex-direction: column;
      }
-
+   
      #work .work-item p {
         font-size: 13px;
      }
@@ -274,7 +274,35 @@ a {
         margin-right: 40px;
     }
 
+    #mainvisual .title {
+        font-size: 60px;
+    }
 
+    /*--work---*/
+    #work {
+        padding: 0 4%;
+     }
+
+     #work .work-container {
+        text-align: left;
+     }
+     #work .work-content {
+        width: 100%;
+    }
+
+    #work .work-item {
+        width: 100%;
+    }
+
+    #work .work-item p {
+        font-size: 17px;
+    }
+
+    #work-section p {
+        font-size: 11px;
+     }
+
+    /*---footer----*/
     #footer .nav ul {
         margin-right: 40px;
     }
@@ -297,7 +325,7 @@ a {
 
 }
 
-
+/*--------スマホ表示-------*/
 @media screen and (max-width: 399px) {
     #header .nav ul {
         margin-right: 40px;
@@ -307,6 +335,30 @@ a {
         margin-right: 40px;
     }
 
+    #mainvisual .title {
+        font-size: 60px;
+    }
+
+    /*--work--*/
+    #work {
+        padding: 0 4%;
+     }
+     #work .work-content {
+        width: 100%;
+    }
+
+    #work .work-item {
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    #work .work-item p {
+        font-size: 15px;
+     }
+
+     #work-section p {
+        font-size: 11px;
+     }
 
     #footer .nav ul li {
         margin-right: -10px;
