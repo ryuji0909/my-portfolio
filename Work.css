@@ -10,11 +10,13 @@ body {
     background-color: black;
     color: #fff;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    /*opacity: 0; /*bodyの中の要素を非表示にします*/ 
-    /*transition: opacity 4s ease; /*表示させるスピード*/
+    opacity: 0; /*bodyの中の要素を非表示にします*/ 
+    transition: opacity 4s ease; /*表示させるスピード*/
 }
 
-
+body.active {
+    opacity: 1;
+}
 
 img {
     max-width: 100%;
