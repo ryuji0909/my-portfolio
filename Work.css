@@ -67,7 +67,7 @@ html{
     background: #fff;
 }
 
-/*-------nainvisual--------*/
+/*-------mainvisual--------*/
 #mainvisual {
     height: 800px;
     width: 100%;
@@ -234,7 +234,7 @@ html{
 }
 
 @media screen and (max-width: 599px) {
-    #header .nav ul {
+    #footer .nav ul {
         margin-right: 40px;
     }
 
@@ -271,7 +271,6 @@ html{
         margin-right: 40px;
     }
 
-
     #footer .nav ul li {
         margin-right: -10px;
         font-size: 12px;
@@ -295,8 +294,8 @@ html{
         margin-right: 40px;
     }
 
-    #footer .nav ul {
-        margin-right: 40px;
+    #mainvisual {
+        height: 650px;
     }
 
     #mainvisual .title {
@@ -323,6 +322,11 @@ html{
      #work-section p {
         font-size: 11px;
      }
+
+    /*----footer----*/ 
+    #footer .nav ul {
+        margin-right: 40px;
+    } 
 
     #footer .nav ul li {
         margin-right: -10px;
