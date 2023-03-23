@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    opacity: 0; /*bodyの中の要素を非表示にします*/ 
+    transition: opacity 4s ease; /*表示させるスピード*/
+}
+
+body.active {
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+html{
+    /* フォントサイズの正確に */
+    -webkit-text-size-adjust: 100%;
+    /* 文字をシャープに */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* カーニングとリガチャ（合字）を調整 */
+    text-rendering: optimizeLegibility;
+}
+
+.wrapper {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 90px;
+    letter-spacing: 1px;
+}
+   
+.section-title:before {
+    position: absolute;
+    bottom: 1px; /*文字と線の間の幅*/
+    left: calc(50% - 40px); /*下線の場所*/
+    width: 80px; /*下線の長さ*/
+    height: 2px; /*下線の厚み、高さ*/
+    content: '';
+    border-radius: 3px;
+    background: #fff;
+}
+
+/*-------mainvisual--------*/
+#mainvisual {
+    height: 800px;
+    width: 100%;
+    background-image: url(work_mainvisual.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#mainvisual .mainvisual-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+#mainvisual .title {
+    font-size: 150px;
+    display: flex;
+    overflow: hidden;
+    font-family: 'La Belle Aurore'、筆記体。;
+    font-family: 'Noto Serif JP', serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+#mainvisual span {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+ #mainvisual span.fade {
+    opacity: 1;
+  }
+
+/*------work-----*/
+#work {
+    margin: 0 auto 100px auto;
+    width: 100%;
+}
+
+#work .work-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+#work .work-content {
+    width: 50%;
+}
+
+#work img {
+    width: 100%;
+}
+
+#work .work-item {
+    width: 50%;
+    height: 100%;
+    line-height: 2.5;
+    margin-left: 60px;
+}
+
+#work .work-item a {
+    color: blue;
+}
+
+#work .work-item a:hover {
+    text-decoration: underline;
+}
+
+#work p {
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+/*------work-section-----*/
+#work-section {
+    margin-bottom: 100px;
+}
+
+.work-section-title {
+    position:relative;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.work-section-title::after {
+    content:"";
+    display:inline-block;
+    width: 3px;
+    height:40px;
+    background-color:#fff;
+    position:absolute;
+    top:-2px;
+    left: -2px;
+}
+
+#work-section .work-section-content {
+    margin-bottom: 60px;
+}
+
+/*------footer-----*/
+#footer {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .nav ul {
+    display: flex;
+}
+
+#footer .nav ul li {
+    margin-right: 30px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+#footer .nav ul li a:hover {
+    opacity: 0.7;
+}
+
+#footer .footer-footer {
+    font-size: 10px;
+}
+
+
+/*レスポンシブ*/
+@media screen and (max-width: 767px) {
+    #header {
+        text-align: center;
+     }
+
+     #work .work-container {
+        flex-direction: column;
+     }
+   
+     #work .work-item p {
+        font-size: 13px;
+     }
+
+     #work img {
+        width: 100%;
+        margin-bottom: 50px;
+     }
+     
+     #work-section .work-section-content {
+        padding: 0 4%;
+     }
+
+     #footer {
+        padding: 0 4%;
+        align-items: center;
+     }
+
+     #footer .nav ul {
+        gap: 30px;
+     }
+
+}
+
+@media screen and (max-width: 599px) {
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual .title {
+        font-size: 60px;
+    }
+
+    /*--work---*/
+    #work {
+        padding: 0 4%;
+     }
+
+     #work .work-container {
+        text-align: left;
+     }
+     #work .work-content {
+        width: 100%;
+    }
+
+    #work .work-item {
+        width: 100%;
+    }
+
+    #work .work-item p {
+        font-size: 17px;
+    }
+
+    #work-section p {
+        font-size: 11px;
+     }
+
+    /*---footer----*/
+    #footer .nav ul {
+        margin-right: 40px;
+    }
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+
+}
+
+/*--------スマホ表示-------*/
+@media screen and (max-width: 399px) {
+    #header .nav ul {
+        margin-right: 40px;
+    }
+
+    #mainvisual {
+        height: 650px;
+    }
+
+    #mainvisual .title {
+        font-size: 60px;
+    }
+
+    /*--work--*/
+    #work {
+        padding: 0 4%;
+     }
+     #work .work-content {
+        width: 100%;
+    }
+
+    #work .work-item {
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    #work .work-item p {
+        font-size: 14px;
+     }
+
+     #work-section p {
+        font-size: 11px;
+     }
+
+    /*----footer----*/ 
+    #footer .nav ul {
+        margin-right: 40px;
+    } 
+
+    #footer .nav ul li {
+        margin-right: -10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-footer {
+        padding-bottom: 15px;
+        font-size: 10px;
+    }
+
+    #footer .footer-footer p {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #work .work-item p {
+        font-size: 13px;
+     }
+}
+
+
