@@ -132,6 +132,15 @@ a {
     font-weight: normal;
 }
 
+#mainvisual span {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+ #mainvisual span.fade {
+    opacity: 1;
+  }
+
 /*------work-----*/
 #work {
     margin: 0 auto 100px auto;
@@ -325,16 +334,6 @@ a {
     #footer .nav ul {
         margin-right: 40px;
     }
-
-    #mainvisual {
-        position: relative;
-    }
-
-    #mainvisual .mainvisual-content {
-        position: absolute;
-        top: 20%;
-        left: 20%;
-     }
 
     #mainvisual .title {
         font-size: 60px;
