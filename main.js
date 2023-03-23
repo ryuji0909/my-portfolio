@@ -29,5 +29,5 @@ const spans = document.querySelectorAll('.mainvisual-content span');
 spans.forEach((span, index) => {
   setTimeout(() => {
     span.classList.add('fade');
-  }, 800 * index);
+  }, 500 * index);
 });
