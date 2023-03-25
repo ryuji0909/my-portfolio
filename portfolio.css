@@ -154,24 +154,18 @@ html{
 }
 
 .work-section-title {
-    position:relative;
-    padding-left: 15px;
     margin-bottom: 30px;
-}
-
-.work-section-title::after {
-    content:"";
-    display:inline-block;
-    width: 3px;
-    height:40px;
-    background-color:#fff;
-    position:absolute;
-    top:-2px;
-    left: -2px;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
 }
 
 #work-section .work-section-content {
     margin-bottom: 60px;
+}
+
+#work-section .work-section-content p {
+    font-size: 15px;
 }
 
 /*------footer-----*/
