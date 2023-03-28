@@ -204,7 +204,10 @@ a {
    text-align: center;
    gap: 50px;
 } 
-
+.work-container1 {
+    text-align: center;
+    margin-top: 60px;
+}
 .work-container p {
     padding-top: 20px;
 }
@@ -286,6 +289,10 @@ img:hover{
         margin-top: -20px;
         font-size: 15px;
         font-weight: normal;
+    }
+
+    #about .about-items {
+        width: 100%;
     }
 
     #about .about-content {
